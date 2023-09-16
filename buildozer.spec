@@ -33,11 +33,11 @@ version = 0.1
 
 # (str) Application versioning (method 2)
 # version.regex = __version__ = ['"](.*)['"]
-# version.filename = %(source.dir)s/main.py
+version.filename = %(source.dir)s/main.py
 
 # (list) Application requirements
 # comma separated e.g. requirements = sqlite3,kivy
-requirements = python3,kivy,kivy,pillow
+requirements = python3,kivy
 
 # (str) Custom source folders for requirements
 # Sets custom source for any requirements with recipes
@@ -54,7 +54,7 @@ icon.filename = %(source.dir)s/kaizo.png
 orientation = portrait
 
 # (list) List of service to declare
-#services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
+services = NAME:ENTRYPOINT_TO_PY,NAME2:ENTRYPOINT2_TO_PY
 
 #
 # OSX Specific
@@ -71,6 +71,7 @@ osx.kivy_version = 1.9.1
 
 #
 # Android specific
+#
 
 # (bool) Indicate if the application should be fullscreen or not
 fullscreen = 0
@@ -94,10 +95,10 @@ fullscreen = 0
 
 # (list) Permissions
 # (See https://python-for-android.readthedocs.io/en/latest/buildoptions/#build-options-1 for all the supported syntaxes and properties)
-android.permissions = android.permission.INTERNET, (name=android.permission.WRITE_EXTERNAL_STORAGE;maxSdkVersion=18)
+android.permissions = INTERNET,WRITE,EXTERNAL,STORAGE
 
 # (list) features (adds uses-feature -tags to manifest)
-android.features = android.hardware.usb.host
+#android.features = android.hardware.usb.host
 
 # (int) Target Android API, should be as high as possible.
 android.api = 31
@@ -124,12 +125,12 @@ android.ndk_path =
 android.sdk_path =
 
 # (str) ANT directory (if empty, it will be automatically downloaded.)
-android.ant_path =
+#android.ant_path =
 
 # (bool) If True, then skip trying to update the Android sdk
 # This can be useful to avoid excess Internet downloads or save time
 # when an update is due and you just want to test/build your package
- android.skip_update = False
+# android.skip_update = False
 
 # (bool) If True, then automatically accept SDK license
 # agreements. This is intended for automation only. If set to False,
